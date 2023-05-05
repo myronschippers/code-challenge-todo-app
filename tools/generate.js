@@ -4,14 +4,38 @@ const { generateTemplateFiles } = require('generate-template-files');
 
 generateTemplateFiles([
   {
-    option: 'Component',
+    option: 'Component as Template',
     defaultCase: '(pascalCase)',
     entry: {
       folderPath: './tools/templates/component/',
     },
     stringReplacers: ['__name__'],
     output: {
-      path: './src/components/__name__(kebabCase)',
+      path: './src/app/templates/__name__(kebabCase)',
+      // pathAndFileNameDefaultCase: '(pascalCase)',
+    },
+  },
+  {
+    option: 'Component as Feature',
+    defaultCase: '(pascalCase)',
+    entry: {
+      folderPath: './tools/templates/component/',
+    },
+    stringReplacers: ['__name__'],
+    output: {
+      path: './src/components/features/__name__(kebabCase)',
+      // pathAndFileNameDefaultCase: '(pascalCase)',
+    },
+  },
+  {
+    option: 'Component as UI',
+    defaultCase: '(pascalCase)',
+    entry: {
+      folderPath: './tools/templates/component/',
+    },
+    stringReplacers: ['__name__'],
+    output: {
+      path: './src/components/ui/__name__(kebabCase)',
       // pathAndFileNameDefaultCase: '(pascalCase)',
     },
   },
