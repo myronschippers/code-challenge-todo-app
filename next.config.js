@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  eslint: {
+    dirs: ['src'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
