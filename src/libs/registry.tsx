@@ -9,7 +9,7 @@ export default function StyledComponentsRegistry({ children }: { children: React
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {children}
+      <main>{children}</main>
     </ThemeProvider>
   );
 }
