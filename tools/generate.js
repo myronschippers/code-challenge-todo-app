@@ -7,7 +7,7 @@ generateTemplateFiles([
     option: 'Component as Template',
     defaultCase: '(pascalCase)',
     entry: {
-      folderPath: './tools/templates/component/',
+      folderPath: './tools/templates/component-template/',
     },
     stringReplacers: ['__name__'],
     output: {
@@ -19,7 +19,7 @@ generateTemplateFiles([
     option: 'Component as Feature',
     defaultCase: '(pascalCase)',
     entry: {
-      folderPath: './tools/templates/component/',
+      folderPath: './tools/templates/component-feature/',
     },
     stringReplacers: ['__name__'],
     output: {
@@ -31,11 +31,11 @@ generateTemplateFiles([
     option: 'Component as UI',
     defaultCase: '(pascalCase)',
     entry: {
-      folderPath: './tools/templates/component/',
+      folderPath: './tools/templates/component-ui/',
     },
     stringReplacers: ['__name__'],
     output: {
-      path: './src/components/ui/__name__(kebabCase)',
+      path: './src/components/ui/__name__(pascalCase)',
       // pathAndFileNameDefaultCase: '(pascalCase)',
     },
   },

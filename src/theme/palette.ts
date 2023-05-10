@@ -17,7 +17,8 @@ const dark = {
 } as const;
 
 const palette = {
-  primary: 'hsl(220, 98%, 61%)',
+  primary: '	#3a7bfd',
+  primaryHover: '	#2651A6',
   checkGradient: 'linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)',
   light,
   dark,
