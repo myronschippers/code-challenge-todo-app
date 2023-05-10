@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Wrapper } from '../components/templates/Wrapper';
 import { GlobalStyles } from '../theme/GlobalStyles';
 import * as theme from '../theme';
 
@@ -9,7 +10,9 @@ export default function StyledComponentsRegistry({ children }: { children: React
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <main>{children}</main>
+      <main>
+        <Wrapper>{children}</Wrapper>
+      </main>
     </ThemeProvider>
   );
 }
