@@ -11,8 +11,19 @@ generateTemplateFiles([
     },
     stringReplacers: ['__name__'],
     output: {
-      path: './src/app/templates/__name__(kebabCase)',
+      path: './src/components/templates/__name__(pascalCase)',
       // pathAndFileNameDefaultCase: '(pascalCase)',
+    },
+  },
+  {
+    option: 'Component as Page',
+    defaultCase: '(pascalCase)',
+    entry: {
+      folderPath: './tools/templates/component-page/',
+    },
+    stringReplacers: ['__name__'],
+    output: {
+      path: './src/components/pages/__name__(pascalCase)',
     },
   },
   {
@@ -23,7 +34,7 @@ generateTemplateFiles([
     },
     stringReplacers: ['__name__'],
     output: {
-      path: './src/components/features/__name__(kebabCase)',
+      path: './src/components/features/__name__(pascalCase)',
       // pathAndFileNameDefaultCase: '(pascalCase)',
     },
   },
