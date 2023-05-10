@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { StyledOverlayContainer, StyledOverlayToggleClose } from './styled';
+import { StyledOverlayContainer, StyledOverlayToggleClose, StyledOverlayToggleOpen } from './styled';
 
 interface IProps {}
 
@@ -23,8 +23,7 @@ export const DesignOverlay: React.FC<IProps> = () => {
           <StyledOverlayToggleClose onClick={() => setIsOpen(false)}>Close</StyledOverlayToggleClose>
         </>
       )}
+      {!isOpen && <StyledOverlayToggleOpen onClick={() => setIsOpen(true)}>Open</StyledOverlayToggleOpen>}
     </StyledOverlayContainer>
   );
 };
-
-DesignOverlay.defaultProps = {};

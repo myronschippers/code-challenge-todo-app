@@ -11,7 +11,6 @@ const StyledToggleBtnMixin = css`
 
 export const StyledOverlayContainer = styled.div`
   width: 100vw;
-  height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
@@ -20,8 +19,8 @@ export const StyledOverlayContainer = styled.div`
   & > img {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    transform: translate(-50%, 0);
     opacity: 0.3;
   }
 `;
@@ -35,5 +34,17 @@ export const StyledOverlayToggleClose = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.primaryHover};
+  }
+`;
+
+export const StyledOverlayToggleOpen = styled.button`
+  ${StyledToggleBtnMixin}
+  background-color: ${({ theme }) => theme.palette.dark.darkerGrayishBlue};
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.dark.veryDarkGrayishBlue};
   }
 `;
