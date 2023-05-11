@@ -11,6 +11,7 @@ export const StyledTopper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-top: 6.8rem;
+  margin-bottom: 3.2rem;
 `;
 
 export const StyledHeadline = styled.h1`

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { DesignOverlay } from '../../ui/DesignOverlay';
+import { Paper } from '../../ui/Paper';
 import { IconSun } from '../../../icons';
 import { StyledPlaceholderBlock, StyledTopper, StyledHeadline } from './styles';
 
@@ -15,6 +16,8 @@ export const HomePage: React.FC<IProps> = (props) => {
         <StyledHeadline>TODO</StyledHeadline>
         <IconSun />
       </StyledTopper>
+
+      <Paper>Content</Paper>
     </div>
   );
 };
