@@ -1,22 +1,40 @@
-// for media query
-const customMediaQuery = (maxWidth: number) => `@media (max-width: ${maxWidth}px)`;
+export const bpSizeUnits = {
+  xs: 330,
+  sm: 592,
+  md: 768,
+  lg: 992,
+  xl: 1024,
+  xxl: 1200,
+} as const;
 
-interface IMediaQueriesBreakpoints {
-  custom: (maxNumber: number) => string;
-  xs: string;
-  sm: string;
-  md: string;
-  lg: string;
-  xl: string;
-  xxl: string;
+const customMediaQuery = (sizeUnit: number, direction: 'up' | 'down'): string => {
+  if (direction === 'up') {
+    return `@media (min-width: ${sizeUnit}px)`;
+  }
+
+  return `@media (max-width: ${sizeUnit}px)`;
+};
+
+const up = (bpSize: BreakpointSizeKeys) => {
+  const sizeValue = bpSizeUnits[bpSize];
+  return customMediaQuery(sizeValue, 'up');
+};
+
+const down = (bpSize: BreakpointSizeKeys) => {
+  const sizeValue = bpSizeUnits[bpSize];
+  return customMediaQuery(sizeValue, 'down');
+};
+
+type BreakpointSizeKeys = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+
+export interface IMediaQueriesBreakpoints {
+  custom: (size: number, direction: 'up' | 'down') => string;
+  up: (bpKey: BreakpointSizeKeys) => string;
+  down: (bpKey: BreakpointSizeKeys) => string;
 }
 
 export const media: IMediaQueriesBreakpoints = {
   custom: customMediaQuery,
-  xs: customMediaQuery(330),
-  sm: customMediaQuery(592),
-  md: customMediaQuery(768),
-  lg: customMediaQuery(992),
-  xl: customMediaQuery(1024),
-  xxl: customMediaQuery(1200),
+  up,
+  down,
 };

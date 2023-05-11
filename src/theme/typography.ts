@@ -1,4 +1,12 @@
-const typography = {
+export interface ITypography {
+  sizeReset: string;
+  sizeBase: string;
+  weightNormal: number;
+  weightBold: number;
+  family: string;
+}
+
+const typography: ITypography = {
   sizeReset: '10px',
   sizeBase: '1.8rem',
   weightNormal: 400,

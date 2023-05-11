@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { ITheme } from './types';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
@@ -88,12 +89,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
+    background: ${({ theme }) => (theme as ITheme).palette.current.background};
     font-size: 16px;
     scroll-behavior: smooth;
   }
