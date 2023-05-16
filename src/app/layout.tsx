@@ -1,7 +1,7 @@
-import { Inter, Josefin_Sans } from 'next/font/google';
-import StyledComponentsRegistry from '../libs/registry';
+import { Josefin_Sans } from 'next/font/google';
+import StyledComponentsRegistry from '@/libs/registry';
+import { MainLayout } from '@/components/templates/MainLayout';
 
-const inter = Inter({ subsets: ['latin'] });
 const josefinSans = Josefin_Sans({ subsets: ['latin'] });
 
 export const metadata = {
@@ -13,7 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={josefinSans.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <MainLayout>{children}</MainLayout>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
