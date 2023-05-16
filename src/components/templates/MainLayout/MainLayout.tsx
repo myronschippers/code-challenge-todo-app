@@ -1,17 +1,18 @@
 'use client';
 
 import React from 'react';
+import { MainHeader } from '@/components/templates/MainHeader';
 import { Wrapper } from '@/components/templates/Wrapper';
-import StyledComponentsRegistry from '@/libs/registry';
-import { StyledMainLayoutContainer } from './styles';
+import { StyledMainLayoutContainer, StyledMainLayoutMainContent } from './styles';
 import { IMainLayoutProps } from './types';
 
 export const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
   return (
-    <StyledComponentsRegistry>
-      <StyledMainLayoutContainer>
+    <StyledMainLayoutContainer>
+      <MainHeader />
+      <StyledMainLayoutMainContent>
         <Wrapper>{children}</Wrapper>
-      </StyledMainLayoutContainer>
-    </StyledComponentsRegistry>
+      </StyledMainLayoutMainContent>
+    </StyledMainLayoutContainer>
   );
 };
