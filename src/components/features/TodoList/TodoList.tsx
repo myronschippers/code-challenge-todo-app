@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { CompletionList } from '@/components/ui/CompletionList';
 import { Paper } from '@/components/ui/Paper';
 import { MOCK_TODO_LIST } from './TodoList.constants';
 import { StyledTodoListContainer } from './styles';
@@ -14,9 +15,7 @@ export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
       <Paper>Paper</Paper>
 
       <Paper>
-        {todoList.map((todoItem, itemIndex) => (
-          <div key={itemIndex}>{todoItem.text}</div>
-        ))}
+        <CompletionList list={todoList} />
       </Paper>
     </StyledTodoListContainer>
   );

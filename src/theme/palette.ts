@@ -19,6 +19,7 @@ interface IPaletteDark {
 interface IPaletteCurrent {
   background: string;
   paper: string;
+  divider: string;
 }
 
 export interface IPalette {
@@ -56,7 +57,8 @@ const palette: IPalette = {
   dark,
   current: {
     background: dark.veryDarkBlue,
-    paper: dark.veryDarkGrayishBlue,
+    paper: dark.veryDarkDesaturatedBlue,
+    divider: dark.veryDarkGrayishBlue,
   },
 } as const;
 
