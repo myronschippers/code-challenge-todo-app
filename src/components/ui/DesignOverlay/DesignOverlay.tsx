@@ -21,14 +21,10 @@ export const DesignOverlay: React.FC<IProps> = () => {
     setLayoutAs(newLayout);
   };
 
-  const layoutOpts = (
-    <>
-      <StyledOverlayToggleOpen onClick={onToggleDesignLayout}>Toggle Layout</StyledOverlayToggleOpen>
-    </>
-  );
+  const layoutOpts = <StyledOverlayToggleOpen onClick={onToggleDesignLayout}>Toggle Layout</StyledOverlayToggleOpen>;
 
   return (
-    <StyledOverlayContainer>
+    <StyledOverlayContainer data-test-id="DesignOverlay">
       {isOpen && (
         <>
           {layoutAs === 'desktop' ? (
