@@ -36,24 +36,27 @@ The code challenge is to build out a todo app and get it looking as close to the
 
 **Application Requirements:**
 
-- View the optimal layout for the app depending on their device's screen size (responsive application)
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list
-- **Bonus**: Build this project as a full-stack application
+- [x] View the optimal layout for the app depending on their device's screen size (responsive application)
+- [x] See hover states for all interactive elements on the page
+- [ ] Add new todos to the list
+- [x] Mark todos as complete
+- [x] Delete todos from the list
+- [ ] Filter by all/active/complete todos
+- [ ] Clear all completed todos
+- [ ] Toggle light and dark mode
+- [ ] **Bonus**: Drag and drop to reorder items on the list
+- [ ] **Bonus**: Build this project as a full-stack application
 
 ### Screenshots
 
-> [COMING SOON] Screenshots of the final application in action
+> [COMING SOON] Screenshots of the final application are coming but there will be some in progress shots
+
+**Process Screenshot 05/17/2023:**
+![](inprogress-screenshot-2023-05-17)
 
 ### Links
 
-> [COMING SOON] Links to where the application is deployed and other helpful resources
+> [COMING SOON] Links to where the application is deployed will be updated when the application is in a deployable state
 
 ## Dev Process
 
@@ -65,42 +68,41 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 #### Getting Started
 
-1. run `npx create-next-app@latest`
-    - make all selections needed
-    - Yes to Typescript on the project
-    - No to Tailwind for styling
+> [STARTER] Built leveraging `npx create-next-app@latest`, make all selections needed, Yes to Typescript on the project, and No to Tailwind for styling
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Now, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load font families, from custom Google Fonts.
 
 #### Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application will be deployed to the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ### Learning Highlights
 
-- ...
+- Using some great hacks for styling CSS gradients as borders that I have not used in a long time
 
 ### Continued Development
 
 Items to expand upon after the base application has been built.
 
-- [ ] ...
+- [ ] Add user authentication
+- [ ] Add serverless support
+- [ ] Add database integration
 
 ### Useful Resources
 
