@@ -1,6 +1,5 @@
 import React from 'react';
 import { CompletionListItem } from '@/components/ui/CompletionListItem';
-import { Paper } from '@/components/ui/Paper';
 import { StyledCompletionListContainer } from './styles';
 import { ICompletionListProps } from './types';
 
