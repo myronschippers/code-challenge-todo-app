@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledMainLayoutContainer = styled.div`
-  &::before {
+  &:before {
     content: '';
     width: 100%;
     height: 300px;

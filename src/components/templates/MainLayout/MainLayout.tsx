@@ -9,7 +9,7 @@ import { IMainLayoutProps } from './types';
 
 export const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
   return (
-    <StyledMainLayoutContainer>
+    <StyledMainLayoutContainer data-test-id="MainLayout">
       <DesignOverlay />
       <MainHeader />
       <StyledMainLayoutMainContent>
