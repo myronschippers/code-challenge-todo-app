@@ -52,7 +52,7 @@ The code challenge is to build out a todo app and get it looking as close to the
 > [COMING SOON] Screenshots of the final application are coming but there will be some in progress shots
 
 **Process Screenshot 05/17/2023:**
-![](inprogress-screenshot-2023-05-17)
+![in progress screenshot on 2023-05-17](./documentation/inprogress-screenshot-2023-05-17.png)
 
 ### Links
 
