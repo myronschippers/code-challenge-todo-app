@@ -10,12 +10,21 @@ import { ITodoListProps, ITodoItem } from './types';
 export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
   const [todoList, setTodoList] = useState<ITodoItem[]>(MOCK_TODO_LIST);
 
+  const handleRemoveTodo = (todoId: number) => {
+    const newTodoList = todoList.filter((todoItem) => todoItem.id !== todoId);
+
+    setTodoList(newTodoList);
+  };
+
   return (
     <StyledTodoListContainer>
       <Paper>Paper</Paper>
 
       <Paper>
-        <CompletionList list={todoList} />
+        <CompletionList
+          list={todoList}
+          removeItemCallback={handleRemoveTodo}
+        />
       </Paper>
     </StyledTodoListContainer>
   );

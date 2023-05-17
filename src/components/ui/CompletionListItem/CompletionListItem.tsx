@@ -8,7 +8,18 @@ import {
 } from './styles';
 import { ICompletionListItemProps } from './types';
 
-export const CompletionListItem: React.FC<ICompletionListItemProps> = ({ label, isCompleted }) => {
+export const CompletionListItem: React.FC<ICompletionListItemProps> = ({
+  itemId,
+  label,
+  isCompleted,
+  removeItemCallback,
+}) => {
+  const onClickRemove = () => {
+    if (removeItemCallback) {
+      removeItemCallback(itemId);
+    }
+  };
+
   return (
     <StyledCompletionListItemContainer role="button">
       {isCompleted ? (
@@ -19,7 +30,7 @@ export const CompletionListItem: React.FC<ICompletionListItemProps> = ({ label, 
         <StyledIncompleteMark />
       )}
       <span>{label}</span>
-      <StyledRemoveButton>
+      <StyledRemoveButton onClick={onClickRemove}>
         <IconCross />
       </StyledRemoveButton>
     </StyledCompletionListItemContainer>

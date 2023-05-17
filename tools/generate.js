@@ -1,6 +1,8 @@
-const { generateTemplateFiles } = require('generate-template-files');
-
+// Ran across this code generator setup from Robert Savian
+// he has a great article outlining it's implementation
 // https://medium.com/@robertsavian/generate-template-files-with-ease-19b320615359
+
+const { generateTemplateFiles } = require('generate-template-files');
 
 generateTemplateFiles([
   {
