@@ -4,6 +4,8 @@ interface IPaletteLight {
   lightGrayishBlue: string;
   darkGrayishBlue: string;
   veryDarkGrayishBlue: string;
+  remove: string;
+  removeHover: string;
 }
 
 interface IPaletteDark {
@@ -14,12 +16,16 @@ interface IPaletteDark {
   darkGrayishBlue: string;
   darkerGrayishBlue: string;
   veryDarkGrayishBlue: string;
+  remove: string;
+  removeHover: string;
 }
 
 interface IPaletteCurrent {
   background: string;
   paper: string;
   divider: string;
+  remove: string;
+  removeHover: string;
 }
 
 export interface IPalette {
@@ -32,33 +38,39 @@ export interface IPalette {
 }
 
 const light: IPaletteLight = {
-  veryLightGray: 'hsl(0, 0%, 98%)',
-  veryLightGrayishBlue: 'hsl(236, 33%, 92%)',
-  lightGrayishBlue: 'hsl(233, 11%, 84%)',
-  darkGrayishBlue: 'hsl(236, 9%, 61%)',
-  veryDarkGrayishBlue: 'hsl(235, 19%, 35%)',
+  veryLightGray: '#fafafa',
+  veryLightGrayishBlue: '#e4e5f1',
+  lightGrayishBlue: '#d2d3db',
+  darkGrayishBlue: '#9394a5',
+  veryDarkGrayishBlue: '#484b6a',
+  remove: '#494C6B',
+  removeHover: '#373A52',
 } as const;
 
 const dark: IPaletteDark = {
-  veryDarkBlue: 'hsl(235, 21%, 11%)',
-  veryDarkDesaturatedBlue: 'hsl(235, 24%, 19%)',
-  lightGrayishBlue: 'hsl(234, 39%, 85%)',
-  lightGrayishBlueHover: 'hsl(236, 33%, 92%)',
-  darkGrayishBlue: 'hsl(234, 11%, 52%)',
-  darkerGrayishBlue: 'hsl(233, 14%, 35%)',
-  veryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
+  veryDarkBlue: '#161722',
+  veryDarkDesaturatedBlue: '#25273c',
+  lightGrayishBlue: '#cacde8',
+  lightGrayishBlueHover: '#e4e5f1',
+  darkGrayishBlue: '#777a92',
+  darkerGrayishBlue: '#4d5066',
+  veryDarkGrayishBlue: '#393a4c',
+  remove: '#494C6B',
+  removeHover: '#5E618A',
 } as const;
 
 const palette: IPalette = {
   primary: '	#3a7bfd',
   primaryHover: '	#2651A6',
-  checkGradient: 'linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)',
+  checkGradient: 'linear-gradient(135deg, #57ddff 0%, #c058f3 100%)',
   light,
   dark,
   current: {
     background: dark.veryDarkBlue,
     paper: dark.veryDarkDesaturatedBlue,
     divider: dark.veryDarkGrayishBlue,
+    remove: dark.remove,
+    removeHover: dark.removeHover,
   },
 } as const;
 

@@ -107,6 +107,7 @@ Items to expand upon after the base application has been built.
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [CSS Tricks](https://css-tricks.com/)
+- [Gradient Border](https://css-tricks.com/gradient-borders-in-css/)
 
 ## Author
 
