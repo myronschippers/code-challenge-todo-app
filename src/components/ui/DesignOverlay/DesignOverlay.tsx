@@ -11,6 +11,9 @@ import {
 
 interface IProps {}
 
+/**
+ * Purely a development aid tool to help adjust the App to match the static design
+ */
 export const DesignOverlay: React.FC<IProps> = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [layoutAs, setLayoutAs] = useState<'desktop' | 'mobile'>('desktop');

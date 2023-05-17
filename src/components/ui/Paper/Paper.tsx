@@ -3,5 +3,5 @@ import { StyledPaperContainer } from './styles';
 import { IPaperProps } from './types';
 
 export const Paper: React.FC<IPaperProps> = ({ children }) => {
-  return <StyledPaperContainer>Paper</StyledPaperContainer>;
+  return <StyledPaperContainer>{children}</StyledPaperContainer>;
 };
