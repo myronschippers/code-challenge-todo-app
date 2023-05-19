@@ -21,7 +21,10 @@ export const CompletionListItem: React.FC<ICompletionListItemProps> = ({
   };
 
   return (
-    <StyledCompletionListItemContainer role="button">
+    <StyledCompletionListItemContainer
+      isCompleted={isCompleted}
+      role="button"
+    >
       {isCompleted ? (
         <StyledCompleteMark>
           <IconCheck />

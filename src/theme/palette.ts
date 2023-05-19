@@ -26,6 +26,8 @@ interface IPaletteCurrent {
   divider: string;
   remove: string;
   removeHover: string;
+  text: string;
+  textDeemphasized: string;
 }
 
 export interface IPalette {
@@ -71,6 +73,8 @@ const palette: IPalette = {
     divider: dark.veryDarkGrayishBlue,
     remove: dark.remove,
     removeHover: dark.removeHover,
+    text: dark.lightGrayishBlue,
+    textDeemphasized: dark.darkGrayishBlue,
   },
 } as const;
 

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { IStyledCompletionListItemContainerProps } from './types';
 
 const MixinMark = css`
   width: 2.6rem;
@@ -43,7 +44,7 @@ export const StyledRemoveButton = styled.button`
   }
 `;
 
-export const StyledCompletionListItemContainer = styled.li`
+export const StyledCompletionListItemContainer = styled.li<IStyledCompletionListItemContainerProps>`
   display: flex;
   align-items: center;
   column-gap: 2.6rem;
@@ -51,6 +52,21 @@ export const StyledCompletionListItemContainer = styled.li`
   padding: 2.5rem 2.2rem;
   border-bottom: 1px solid ${({ theme }) => theme.palette.current.divider};
   cursor: pointer;
+
+  ${({ theme, isCompleted }) => {
+    const { palette } = theme;
+
+    if (isCompleted) {
+      return css`
+        color: ${palette.current.textDeemphasized};
+        text-decoration: line-through;
+      `;
+    }
+
+    return css`
+      color: ${palette.current.text};
+    `;
+  }}
 
   & ${StyledRemoveButton} {
     display: none;
