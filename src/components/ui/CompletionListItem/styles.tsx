@@ -51,6 +51,8 @@ export const StyledCompletionListItemContainer = styled.li<IStyledCompletionList
   width: 100%;
   padding: 2.5rem 2.2rem;
   border-bottom: 1px solid ${({ theme }) => theme.palette.current.divider};
+  letter-spacing: 0.04em;
+  font-size: 1.6rem;
   cursor: pointer;
 
   ${({ theme, isCompleted }) => {

@@ -6,6 +6,7 @@ interface IPaletteLight {
   veryDarkGrayishBlue: string;
   remove: string;
   removeHover: string;
+  focus: string;
 }
 
 interface IPaletteDark {
@@ -18,6 +19,7 @@ interface IPaletteDark {
   veryDarkGrayishBlue: string;
   remove: string;
   removeHover: string;
+  focus: string;
 }
 
 interface IPaletteCurrent {
@@ -28,6 +30,7 @@ interface IPaletteCurrent {
   removeHover: string;
   text: string;
   textDeemphasized: string;
+  focus: string;
 }
 
 export interface IPalette {
@@ -47,6 +50,7 @@ const light: IPaletteLight = {
   veryDarkGrayishBlue: '#484b6a',
   remove: '#494C6B',
   removeHover: '#373A52',
+  focus: '#c058f3',
 } as const;
 
 const dark: IPaletteDark = {
@@ -59,6 +63,7 @@ const dark: IPaletteDark = {
   veryDarkGrayishBlue: '#393a4c',
   remove: '#494C6B',
   removeHover: '#5E618A',
+  focus: '#c058f3',
 } as const;
 
 const palette: IPalette = {
@@ -75,6 +80,7 @@ const palette: IPalette = {
     removeHover: dark.removeHover,
     text: dark.lightGrayishBlue,
     textDeemphasized: dark.darkGrayishBlue,
+    focus: dark.focus,
   },
 } as const;
 

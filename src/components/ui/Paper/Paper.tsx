@@ -2,6 +2,21 @@ import React from 'react';
 import { StyledPaperContainer } from './styles';
 import { IPaperProps } from './types';
 
-export const Paper: React.FC<IPaperProps> = ({ children }) => {
-  return <StyledPaperContainer>{children}</StyledPaperContainer>;
+export const Paper: React.FC<IPaperProps> = ({
+  children,
+  padding,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+}) => {
+  const styledProps = {
+    padding,
+    paddingTop,
+    paddingRight,
+    paddingBottom,
+    paddingLeft,
+  };
+
+  return <StyledPaperContainer {...styledProps}>{children}</StyledPaperContainer>;
 };

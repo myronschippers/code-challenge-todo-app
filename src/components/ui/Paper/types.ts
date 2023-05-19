@@ -1,5 +1,13 @@
 import { ReactNode } from 'react';
 
-export interface IPaperProps {
+export interface IStyledPaperProps {
+  padding?: number;
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+}
+
+export interface IPaperProps extends IStyledPaperProps {
   children?: ReactNode;
 }
