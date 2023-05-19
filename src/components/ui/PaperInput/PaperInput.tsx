@@ -5,7 +5,6 @@ import { IPaperInputProps } from './types';
 
 export const PaperInput: React.FC<IPaperInputProps> = ({ children, onKeyEnter, ...props }) => {
   const onKeyEnterHandler = (keyEvent: KeyboardEvent) => {
-    console.log('onKeyEnterHandler:', keyEvent);
     if (onKeyEnter && keyEvent.code === 'Enter') {
       onKeyEnter();
     }

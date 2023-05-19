@@ -4,31 +4,22 @@ import React, { useState, ChangeEvent } from 'react';
 import { CompletionList } from '@/components/ui/CompletionList';
 import { Paper } from '@/components/ui/Paper';
 import { PaperInput } from '@/components/ui/PaperInput';
-import { MOCK_TODO_LIST } from './TodoList.constants';
+import { TodosService, ITodoItem } from '@/data/Todos';
 import { StyledTodoListContainer } from './styles';
-import { ITodoListProps, ITodoItem } from './types';
+import { ITodoListProps } from './types';
 
 export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
-  const [todoList, setTodoList] = useState<ITodoItem[]>(MOCK_TODO_LIST);
+  const [todoList, setTodoList] = useState<ITodoItem[]>(TodosService.getList);
   const [newTodo, setNewTodo] = useState<string | null>(null);
 
-  const handleRemoveTodo = (todoId: number) => {
-    const newTodoList = todoList.filter((todoItem) => todoItem.id !== todoId);
+  const handleRemoveTodo = async (todoId: number) => {
+    const newTodoList = await TodosService.removeTodo(todoId);
 
     setTodoList(newTodoList);
   };
 
-  const handleToggleCompleted = (todoId: number) => {
-    const newTodoList = todoList.map((todoItem) => {
-      if (todoItem.id === todoId) {
-        return {
-          ...todoItem,
-          completed: !todoItem.completed,
-        };
-      }
-
-      return todoItem;
-    });
+  const handleToggleCompleted = async (todoId: number) => {
+    const newTodoList = await TodosService.toggleCompletion(todoId);
 
     setTodoList(newTodoList);
   };
@@ -39,21 +30,14 @@ export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
     setNewTodo(newTodoValue);
   };
 
-  const onSubmitTodo = () => {
+  const onSubmitTodo = async () => {
     if (!newTodo) {
       return;
     }
 
-    setTodoList([
-      ...todoList,
-      {
-        id: 100 + todoList.length + 1,
-        text: newTodo,
-        completed: false,
-        createdAt: new Date(),
-      },
-    ]);
+    const newTodoList = await TodosService.addTodo(newTodo);
 
+    setTodoList(newTodoList);
     setNewTodo('');
   };
 
