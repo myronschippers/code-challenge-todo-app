@@ -38,7 +38,7 @@ The code challenge is to build out a todo app and get it looking as close to the
 
 - [x] View the optimal layout for the app depending on their device's screen size (responsive application)
 - [x] See hover states for all interactive elements on the page
-- [ ] Add new todos to the list
+- [x] Add new todos to the list
 - [x] Mark todos as complete
 - [x] Delete todos from the list
 - [ ] Filter by all/active/complete todos
@@ -53,6 +53,11 @@ The code challenge is to build out a todo app and get it looking as close to the
 
 **Process Screenshot 05/17/2023:**
 ![in progress screenshot on 2023-05-17](./documentation/inprogress-screenshot-2023-05-17.png)
+
+**Process Screenshot & Video 05/18/2023:**
+![in progress screenshot on 2023-05-18](./documentation/inprogress-screenshot-2023-05-18.png)
+
+![W.I.P. Video Capture 2023-05-18](./documentation/wip-todo-vid-05-18-2023.gif)
 
 ### Links
 
