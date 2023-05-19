@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { IconCheck, IconCross } from '@/icons';
 import {
   StyledCompletionListItemContainer,
@@ -13,16 +13,26 @@ export const CompletionListItem: React.FC<ICompletionListItemProps> = ({
   label,
   isCompleted,
   removeItemCallback,
+  toggleCompletedForItemCallback,
 }) => {
-  const onClickRemove = () => {
+  const onClickRemove = (clickEvent: MouseEvent) => {
+    clickEvent.stopPropagation();
+
     if (removeItemCallback) {
       removeItemCallback(itemId);
+    }
+  };
+
+  const onClickCompleteToggle = () => {
+    if (toggleCompletedForItemCallback) {
+      toggleCompletedForItemCallback(itemId);
     }
   };
 
   return (
     <StyledCompletionListItemContainer
       isCompleted={isCompleted}
+      onClick={onClickCompleteToggle}
       role="button"
     >
       {isCompleted ? (

@@ -16,6 +16,21 @@ export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
     setTodoList(newTodoList);
   };
 
+  const handleToggleCompleted = (todoId: number) => {
+    const newTodoList = todoList.map((todoItem) => {
+      if (todoItem.id === todoId) {
+        return {
+          ...todoItem,
+          completed: !todoItem.completed,
+        };
+      }
+
+      return todoItem;
+    });
+
+    setTodoList(newTodoList);
+  };
+
   return (
     <StyledTodoListContainer>
       <Paper>Paper</Paper>
@@ -24,6 +39,7 @@ export const TodoList: React.FC<ITodoListProps> = ({ children }) => {
         <CompletionList
           list={todoList}
           removeItemCallback={handleRemoveTodo}
+          toggleCompletedForItemCallback={handleToggleCompleted}
         />
       </Paper>
     </StyledTodoListContainer>

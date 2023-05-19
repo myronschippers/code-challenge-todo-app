@@ -10,5 +10,5 @@ export interface ICompletionListItemProps {
   label: string;
   itemId: number;
   removeItemCallback?: (id: number) => void;
-  completeToggleItemCallback?: (id: number) => void;
+  toggleCompletedForItemCallback?: (id: number) => void;
 }

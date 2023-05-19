@@ -3,7 +3,11 @@ import { CompletionListItem } from '@/components/ui/CompletionListItem';
 import { StyledCompletionListContainer } from './styles';
 import { ICompletionListProps } from './types';
 
-export const CompletionList: React.FC<ICompletionListProps> = ({ children, list, removeItemCallback }) => {
+export const CompletionList: React.FC<ICompletionListProps> = ({
+  list,
+  removeItemCallback,
+  toggleCompletedForItemCallback,
+}) => {
   return (
     <StyledCompletionListContainer>
       {list.map((listItem, itemIndex) => (
@@ -13,6 +17,7 @@ export const CompletionList: React.FC<ICompletionListProps> = ({ children, list,
           label={listItem.text}
           isCompleted={listItem.completed}
           removeItemCallback={removeItemCallback}
+          toggleCompletedForItemCallback={toggleCompletedForItemCallback}
         />
       ))}
     </StyledCompletionListContainer>

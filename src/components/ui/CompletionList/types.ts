@@ -11,6 +11,5 @@ export interface ICompletionListProps {
   children?: ReactNode;
   list: ICompletionListItem[];
   removeItemCallback?: (id: number) => void;
-  completeItemCallback?: (id: number) => void;
-  incompleteItemCallback?: (id: number) => void;
+  toggleCompletedForItemCallback?: (id: number) => void;
 }
