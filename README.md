@@ -57,7 +57,7 @@ The code challenge is to build out a todo app and get it looking as close to the
 **Process Screenshot & Video 05/18/2023:**
 ![in progress screenshot on 2023-05-18](./documentation/inprogress-screenshot-2023-05-18.png)
 
-![W.I.P. Video Capture 2023-05-18](./documentation/wip-todo-vid-05-18-2023.gif)
+![W.I.P. Video Capture 2023-05-18](./documentation/vid-wip-todo-05-18-2023.gif)
 
 ### Links
 
