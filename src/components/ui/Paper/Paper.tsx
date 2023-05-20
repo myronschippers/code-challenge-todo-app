@@ -9,6 +9,7 @@ export const Paper: React.FC<IPaperProps> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+  ...props
 }) => {
   const styledProps = {
     padding,
@@ -18,5 +19,12 @@ export const Paper: React.FC<IPaperProps> = ({
     paddingLeft,
   };
 
-  return <StyledPaperContainer {...styledProps}>{children}</StyledPaperContainer>;
+  return (
+    <StyledPaperContainer
+      {...styledProps}
+      {...props}
+    >
+      {children}
+    </StyledPaperContainer>
+  );
 };
