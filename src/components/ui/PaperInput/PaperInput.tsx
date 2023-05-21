@@ -14,7 +14,6 @@ export const PaperInput: React.FC<IPaperInputProps> = ({ children, onKeyEnter, .
     <Paper
       padding={0.2}
       data-testid="PaperInput-container"
-      data-name="testing"
     >
       <StyledInput
         {...props}

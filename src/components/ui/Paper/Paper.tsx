@@ -23,6 +23,7 @@ export const Paper: React.FC<IPaperProps> = ({
     <StyledPaperContainer
       {...styledProps}
       {...props}
+      data-testid={props['data-testid'] ? props['data-testid'] : 'Paper-container'}
     >
       {children}
     </StyledPaperContainer>

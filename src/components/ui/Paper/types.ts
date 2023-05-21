@@ -10,4 +10,5 @@ export interface IStyledPaperProps {
 
 export interface IPaperProps extends IStyledPaperProps {
   children?: ReactNode;
+  ['data-testid']?: string;
 }
