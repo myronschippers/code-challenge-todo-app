@@ -9,7 +9,7 @@ export const CompletionList: React.FC<ICompletionListProps> = ({
   toggleCompletedForItemCallback,
 }) => {
   return (
-    <StyledCompletionListContainer>
+    <StyledCompletionListContainer data-testid="CompletionList-container">
       {list.map((listItem, itemIndex) => (
         <CompletionListItem
           key={itemIndex}

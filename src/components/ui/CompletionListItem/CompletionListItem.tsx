@@ -34,6 +34,7 @@ export const CompletionListItem: React.FC<ICompletionListItemProps> = ({
       isCompleted={isCompleted}
       onClick={onClickCompleteToggle}
       role="button"
+      data-testid="CompletionListItem-container"
     >
       {isCompleted ? (
         <StyledCompleteMark>
